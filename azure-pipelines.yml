@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: PackerBuild@1
+  inputs:
+    templateType: 'builtin'
+    isManagedImage: true
+    baseImageSource: 'default'
+    baseImage: 'Canonical:UbuntuServer:16.04-LTS:linux'
